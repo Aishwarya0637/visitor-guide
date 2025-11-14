@@ -1,9 +1,3 @@
 {
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "https://visitor-guide.lovable.app/$1",
-      "permanent": true
-    }
-  ]
+  "redirects": []
 }
