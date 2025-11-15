@@ -1,0 +1,14 @@
+import { NextResponse } from "next/server";
+
+export function middleware(req) {
+  const url = req.nextUrl.pathname;
+
+  // Block scanner paths
+  const blockedPaths = ["/cgi-bin", "/vendor", "/admin"]; 
+
+  if (blockedPaths.includes(url)) {
+    return new NextResponse("Not found", { status: 404 });
+  }
+
+  return NextResponse.next();
+}
